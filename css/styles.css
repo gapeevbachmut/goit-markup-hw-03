@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -6,13 +12,43 @@ body {
   letter-spacing: 0.02em;
   color: #434455;
   background-color: #fff;
+  margin: 0;
 }
+
 /* #region TEG */
 a {
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
 }
 
 /* #endregion */
@@ -27,14 +63,35 @@ ul {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+
 .logo-color {
   color: #2e2f42;
+}
+
+.container-header {
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 76px;
 }
 
 .nav-link {
   font-weight: 500;
   color: #2e2f42;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: #404bbf;
@@ -43,18 +100,33 @@ ul {
 .address {
   font-style: normal;
 }
+
+.address-item {
+  display: flex;
+  gap: 40px;
+}
+
 .address-link {
   color: #434455;
 }
+
 .address-link:hover,
 .address-link:focus {
   color: #404bbf;
 }
+
 /* #endregion */
 
+/* #region welcome */
 .welcome-section {
   background-color: #2e2f42;
+  padding: 188px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .welcome {
   font-weight: 700;
   font-size: 56px;
@@ -62,17 +134,41 @@ ul {
   text-align: center;
   color: white;
 }
-.button {
+
+.button-wel {
   cursor: pointer;
   background: #4d5ae5;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: #fff;
+  border-radius: 4px;
+  padding: 16px 32px;
+  display: block;
+  margin: 48px auto 0;
 }
 
-.button:hover,
-.button:focus {
+.button-wel:hover,
+.button-wel:focus {
   background: #404bbf;
+}
+
+/* #endregion */
+
+/* #region descriotion */
+.descr-section {
+  padding: 120px 0;
+  align-content: center;
+}
+
+.descr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 156px;
+}
+
+.descr-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .descr-title {
@@ -80,50 +176,117 @@ ul {
   font-size: 20px;
   line-height: 1.2;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
-.descr-text {
-}
+.descr-text {}
+
+/* #endregion */
+
+/* #region team */
 
 .team-section {
   background: #f4f4fd;
+  align-content: center;
+  padding: 120px 0;
 }
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
+
+.team-list {
+  display: flex;
+  gap: 24px;
+  margin: 72px 156px 0 156px;
 }
 
 .team-photo {
   background-color: white;
+  width: calc((100% - 72) / 4);
+  display: flex;
+  flex-direction: column;
 }
+
+.thumb-team-member {
+  height: 260px;
+}
+
+.team-member {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 
 .team-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: #2e2f42;
+  text-align: center;
+  padding: 32px 0 8px;
 }
 
 .team-profession {
+  text-align: center;
+  padding-bottom: 32px;
 }
+
+/* #endregion */
+
+/* #region portfolio */
+
+.portfolio-section {
+  align-content: center;
+  padding: 120px 0;
+}
+
+.portfolio-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 72px 156px 0 156px;
+}
+
+.portfolio-item {
+  width: calc((100% -120) / 6);
+}
+
+.thumb-port-item {
+  height: 300px;
+}
+
+.port-photo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 
 .portfolio-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: #2e2f42;
+  padding: 32px 0 8px;
 }
 
 .portfolio-text {
+  padding-bottom: 32px;
 }
 
+/* #endregion */
+
+/* #region footer */
 .footer {
   background: #2e2f42;
 }
+
+.container-footer {
+  flex-direction: column;
+  margin-left: 156px;
+  padding: 100px 0;
+  width: 264px;
+}
+
 .logo-footer {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -137,6 +300,11 @@ ul {
 .logo-color-footer {
   color: #f4f4fd;
 }
+
 .footer-text {
   color: #f4f4fd;
+  margin-top: 8px;
+
 }
+
+/* #endregion */
