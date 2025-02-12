@@ -43,10 +43,9 @@ img {
 }
 
 .container {
-  display: flex;
   padding: 0 15px;
   margin: 0 auto;
-  width: 1158px;
+  max-width: 1158px;
 }
 
 header {
@@ -83,6 +82,7 @@ header {
 }
 
 .container-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -90,7 +90,7 @@ header {
 .nav-list {
   display: flex;
   gap: 40px;
-
+  align-items: center;
 }
 
 /* 
@@ -108,6 +108,7 @@ flex-direction: row; */
   font-weight: 500;
   color: #2e2f42;
   padding: 24px 0;
+  display: block;
 }
 
 .nav-link:hover,
@@ -117,6 +118,7 @@ flex-direction: row; */
 
 .address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .address-item {
@@ -125,7 +127,9 @@ flex-direction: row; */
 }
 
 .address-link {
+  display: block;
   color: #434455;
+  padding: 24px 0;
 }
 
 .address-link:hover,
@@ -154,6 +158,7 @@ flex-direction: row; */
   text-align: center;
   color: white;
   max-width: 496px;
+  margin: 0 auto;
 }
 
 .button-wel {
@@ -237,20 +242,14 @@ flex-direction: row; */
 
 .team-photo {
   background-color: white;
-  flex-basis: calc((100% - 72) / 4);
+  flex-basis: calc((100% - 72px) / 4);
   display: flex;
   flex-direction: column;
-
   border-radius: 0px 0px 4px 4px;
-
 }
 
 .team-photo-name {
   padding: 32px 0;
-}
-
-.thumb-team-member {
-  height: 260px;
 }
 
 .team-member {
@@ -291,11 +290,10 @@ flex-direction: row; */
 }
 
 .portfolio-item {
-  flex-basis: calc((100% - 48) / 3);
-}
+  flex-basis: calc((100% - 48px) / 3);
+  display: flex;
+  flex-direction: column;
 
-.thumb-port-item {
-  height: 300px;
 }
 
 .port-photo {
